@@ -1,0 +1,303 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Olimnisa - your trusted partner',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+      image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+       Work as doctors in Germany <span class="text-accent dark:text-white highlight"> Specialist residency</span> for everyone
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Germany</span> requires more than 100 thousand medical doctors to fill MD vacancies in hospitals and clinics. Migrate to German, work as doctors and be part of world leading health provider in the heartland of Europe</span
+      >
+      <p></p><span class="block mb-1 sm:hidden font-bold text-blue-600">Work as MD with equivalent pay to German doctors.</span>
+      We work as recruiters for German hospitals with more than 50 specialist residency programs to choose from. Whether consulting or applying, everything is free of charge.</p>
+    </Fragment>
+  </Hero>
+
+  <Features
+    id="features"
+    tagline="Be an MD in Germany"
+    title="Why migrate to Germany?"
+    subtitle="Be part of the largest economy in the European Union"
+    items={[
+      {
+        title: 'Doctor recognition',
+        description:
+          'By working in Germany and having your MD title recognized there you will be able to work as doctor throughout all of European Union and Switzerland.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Specialist Residency',
+        description:
+          'In Germany virtually all MDs will take part in specialist residency program which is free of charge.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Equal pay',
+        description:
+          'Germany has stringent anti discrimination law. Your salary, working conditions and incentives will be identical to German doctors.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Tailored to your needs',
+        description:
+          'Do you prefer to live in a bustling city or quaint village by the sea? In a small clinic or huge university hospital? We can help you find the most suitable place for you',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Traveling Opportunities',
+        description:
+          "Working in Europe means you get to visit other European countries. From Frankfurt to Paris in just 4 hours by train or 2 hours to Rome by plane.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Permanent Residency and Citizenship',
+        description:
+          'Getting a permanent residency (green card) is as easy as working and living in Germany for five years and one year afterwards you are even eligible for citizenship.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="What can we do for you?"
+    title="Doctor placement program tailored just for you"
+    items={[
+      {
+        title: 'Crafting CV and Interview coaching',
+        description:
+          'We talk to you to make your CV look attractive. Help you with mock interviews in English or even German if you prefer.',
+      },
+      {
+        title: 'Help you with the work permit application',
+        description:
+          'A main source of frustration for many potential workers is the time consuming and complex process to apply for work permit, especially for doctors. We help you avoid potential pitfalls.',
+      },
+      {
+        title: 'Finding a place to stay',
+        description:
+          'To be able to apply for a long term visa, you must have a permanent accomodation in Germany. We help you find the right appartment close to your future workplace and we can even furnish it according to your wish so you can feel right at home on your very first day in Germany',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Navigating the complexity of German bureaucracy</h3>
+      We help future employee of our hospitals with the sometimes opaque rules and regulations regarding migrant workers to Germany. Avoid potential problems and delay.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Approbation - MD Recognition',
+        description: `Each MD recognition process (Approbation) is a long and complex process personalized according to your medical school's curriculum as well as your work experience. We help you understand which documents are needed and how to prepare for the state exam.`,
+      },
+      {
+        title: 'Courses',
+        description:
+          'While working as MDs you will be expected to take a German language course as well as a state exam preparatory course. We help you in finding ones suitable for you.',
+      },
+      {
+        title: 'Get to Know Your Way in Germany',
+        description:
+          "Be it welcoming you at the airport and accompanying you on your first week in Germany. Show you how to open a bank account, enroll in health insurance, report yourself to the consulate and town hall. We will help you with these and many other things on your first week in Germany",
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+ 
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Interested? What now?"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Contact us</span>',
+        description:
+          "We'd like to know more about you, your educational background, work experience and what is it you wish to achieve by migrating to Germany. Talk to us and see how we can help you.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Learn German</em>',
+        description:
+          "Except in a few edge cases, German language proficiency is paramount to getting a job offer and visa approval. The learning process will take at least months. Start as early as possible. In the meantime we will look for employers best fit to your needs.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Prepare documents</span>',
+        description:
+          'Prepare the required documents so that everything is ready for your work application and you will also be ready to immediately apply for work permit once you\'ve received a job offer',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Get Ready for Interview!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Our Team"
+    subtitle="Learn more about who we are"
+    testimonials={[
+      {
+        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        name: 'Olimpia Best',
+        job: 'CEO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Mark Thompson Image',
+        },
+      },
+      {
+        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
+        name: 'Nisaa Siregar',
+        job: 'Nephrologist - CfNA Frankfurt',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+          alt: 'Emily Martinez Image',
+        },
+      },
+      {
+        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
+        name: 'Irzadi Siregar',
+        job: 'Partner in Indonesia',
+        image: {
+          src: 'https://images.unsplash.com/photo-1512359573855-953710d3f7a8?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          alt: 'Emily Martinez Image',
+        },
+      },
+
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why AstroWind?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'What do I need to start?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'How to install the Astro + Tailwind CSS template?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "What's something that you don't understand?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+      {
+        title: 'What is something that you would like to try again?',
+        description:
+          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+      },
+      {
+        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        description:
+          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get template',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment>
+  </CallToAction>
+</Layout>
